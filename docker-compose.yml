@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  api:
+    image: node:alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    networks:
+      - backend
+    command: sh -c "sleep 10 && npm run start"
+
+  db:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=12345678
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - backend
+
+  db-seed:
+    build: ./data
+    networks:
+      - backend
+    depends_on:
+      - db
+
+networks:
+  backend:
+
+volumes:
+  dbdata:
+  node_modules:

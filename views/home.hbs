@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">The BookStore</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search title or description" id="search-keyword" name="q">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+
+<div class="posts">
+    <div class="row justify-content-left">
+        {{#each books}}
+        <div class="col-lg-4" style="margin-top: 10px;">
+            <div class="card">
+
+                <img src="{{this.thumbnailUrl}}" style="max-width:10em;margin:1em;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><i>{{this.title}}</i></h5>
+                    <div class="card-subtitle" style="margin-bottom: 1em; color: grey;">by {{this.authors}}</div>
+                    <div class="card-subtitle" style="margin-bottom: 1em;"><strong>ISBN: </strong>{{this.isbn}}</div>
+
+                    {{#if this.shortDescription}}
+                    <div class="card-text" style="margin-bottom: 1em;">{{this.shortDescription}}</div>
+                    {{else}}
+                    <div class="card-text" style="margin-bottom: 1em;">Unfortunately, this book does not have short description :(</div>
+                    {{/if}}
+
+                    <div class="card-text" style="margin-bottom: 1em;">
+                        <p>Categories:
+                            {{#each this.categories}}
+                            <a href="/?category={{this}}">[{{this}}]</a>&nbsp;
+                            {{/each}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

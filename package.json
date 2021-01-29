@@ -1,0 +1,26 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Toy project for performance testing",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmput402-w21/bookstore.git"
+  },
+  "keywords": [],
+  "author": "CMPUT402",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/cmput402-w21/bookstore/issues"
+  },
+  "homepage": "https://github.com/cmput402-w21/bookstore#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mongodb": "^3.6.3"
+  }
+}

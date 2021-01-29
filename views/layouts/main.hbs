@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <!-- <meta> tags> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Book Face</title>
+</head>
+
+<body>
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>        
+        $(document).ready(function () {
+            $('button[type="submit"]').attr('disabled', true);
+            $('input[type="search"]').on('keyup', function () {
+                let textarea_value = $("#search-keyword").val();
+                console.log(textarea_value);
+                if (textarea_value != '') {
+                    $('button[type="submit"]').attr('disabled', false);
+                } else {
+                    $('button[type="submit"]').attr('disabled', true);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
