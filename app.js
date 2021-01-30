@@ -26,7 +26,6 @@ function main(client) {
         const category = req.query.category;
         const query = (category !== undefined && category.length > 0) ? { categories: category } : {};
 
-        console.log(query)
         db.collection('Books')
             .find(query)
             .toArray()
