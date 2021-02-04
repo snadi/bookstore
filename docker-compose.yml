@@ -15,7 +15,7 @@ services:
     cpus: 0.5
     mem_limit: 50m
     mem_reservation: 25m
-    command: sh -c "sleep 20 && npm run start"
+    command: sh -c "sleep 20 && npm install && npm run start"
 
   db:
     image: mongo
