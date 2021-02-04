@@ -26,7 +26,23 @@ api_1      | (node:19) DeprecationWarning: current Server Discovery and Monitori
 api_1      | (Use `node --trace-deprecation ...` to show where the warning was created)
 ```
 
+This log will take some time to appear because the database is bootstraping and
+the script is populating the database with some mock data. In other words, only
+start accessing/testing the app once you see the output as shown above.
+
 Then, to access the bookstore on the browser, type `localhost:3000`.
+
+# Endpoints
+
+There are two HTTP GET method endpoints available:
+
+- `GET /`. Gets all books. To retrieve books only in certain category, you can
+  use optional query parameter `category`. For example, to get all books in
+  category "Java", the request will look like `GET /?category=Java`.
+
+- `GET /search?q={title}`. Searches books by `title`. For example, to get all books
+  that contain "Java" in their title, the request will look like `GET
+  /search?q=Java`.
 
 # Resource usage stats
 
@@ -34,3 +50,6 @@ To see how many resources the application "eats", type `docker stats`
 after running locally. Make sure the app is running in parallel,
 otherwise there would be no output.
 
+# Credits
+
+Books data obtain from [`dudeonthehorse`'s repository](https://github.com/dudeonthehorse/datasets).
