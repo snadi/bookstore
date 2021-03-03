@@ -52,4 +52,7 @@ otherwise there would be no output.
 
 # Credits
 
+Created and being maintained by [Batyr Nuryyev](https://github.com/oneturkmen), for
+CMPUT 402 "Software Quality" class (Winter 2021).
+
 Books data obtain from [`dudeonthehorse`'s repository](https://github.com/dudeonthehorse/datasets).
