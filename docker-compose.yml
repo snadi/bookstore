@@ -18,7 +18,7 @@ services:
     command: sh -c "sleep 20 && npm install && npm run start"
 
   db:
-    image: mongo
+    image: mongo:4.0.21
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=12345678

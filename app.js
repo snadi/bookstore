@@ -4,7 +4,7 @@ const MongoClient = require('mongodb').MongoClient
 
 const uri = "mongodb://admin:12345678@db:27017";
 
-MongoClient.connect(uri)
+MongoClient.connect(uri, {useUnifiedTopology: true})
     .then(main)
     .catch(console.error)
 
