@@ -1,6 +1,6 @@
 # The BookStore
 
-Plenty of tech books.
+A web application showing plenty of tech books.
 
 # Requirements
 
@@ -46,13 +46,12 @@ There are two HTTP GET method endpoints available:
 
 # Resource usage stats
 
-To see how many resources the application "eats", type `docker stats`
-after running locally. Make sure the app is running in parallel,
+To see how much resources the application uses, run `docker stats` in this folder but on a separate terminal. Make sure the app is running in parallel,
 otherwise there would be no output.
 
 # Credits
 
-Created and being maintained by [Batyr Nuryyev](https://github.com/oneturkmen), for
-CMPUT 402 "Software Quality" class (Winter 2021).
+This application was originally created by [Batyr Nuryyev](https://github.com/oneturkmen) at [https://github.com/cmput402-w21/bookstore](https://github.com/cmput402-w21/bookstore), for
+the University of Alberta CMPUT 402 "Software Quality" class (Winter 2021).
 
 Books data obtain from [`dudeonthehorse`'s repository](https://github.com/dudeonthehorse/datasets).
